@@ -27,5 +27,11 @@ namespace UsingApiApp.Controllers
         {
             return Ok(_kursServices.GetById(id));
         }
+        [HttpGet]
+        [Route("getCourse/{Name}")]
+        public IActionResult GetCourse(string Name) 
+        {
+            return Ok(_kursServices.GetByCourse(Name));
+        }
     }
 }

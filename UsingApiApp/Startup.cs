@@ -27,6 +27,7 @@ namespace UsingApiApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<ICreditServices, CreditServices>();
             services.AddScoped<IKursServices, KursServices>();
             services.AddControllers();
             services.AddSwaggerGen(c =>

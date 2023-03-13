@@ -18,23 +18,29 @@ namespace UsingApiAppData.Services
                 {
                     Id = 1,
                     Name = "USD",
-                    Rate = 11350
+                    Rate = 11350,
+                    MaxRaplec = 1000,
                 },
                 new Kurs()
                 {
                     Id = 2,
                     Name = "EUR",
-                    Rate = 13100
+                    Rate = 13100,
+                    MaxRaplec = 1000,
                 },
                 new Kurs()
                 {
                     Id = 3,
                     Name = "RUB",
-                    Rate = 180
+                    Rate = 180,
+                    MaxRaplec = 1000,
                 }
             };
         }
         public List<Kurs> GetAll() => kurslar;
+
+        public Kurs GetByCourse(string Name)=>kurslar.FirstOrDefault(x => x.Name == Name);
+
         public Kurs GetById(int id) => kurslar.FirstOrDefault(x => x.Id == id);
     }
 }

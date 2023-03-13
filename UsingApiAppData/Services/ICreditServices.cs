@@ -7,10 +7,10 @@ using UsingApiAppData.Models;
 
 namespace UsingApiAppData.Services
 {
-    public interface IKursServices
+    public interface ICreditServices
     {
-        List<Kurs> GetAll();
-        Kurs GetById(int id);
-        Kurs GetByCourse(string Name);
+        List<Credit> GetCreditAll();
+        Credit GetCreditById(int Id);
+        Credit GetCreditSearch(string FullName);
     }
 }
